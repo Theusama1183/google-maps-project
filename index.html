@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <title>Vehicle Tracking</title>
+  </head>
+
+  <body onload="initMap()">
+    <div class="container-fluid px-4 h-100 mt-4">
+      <div class="row p-0 h-100">
+        <div class="col-md-3 col-sm-6">
+          <div class="payment-method">
+            <div class="text">
+              <h4 class="text-center">Upcoming Ride Start Now</h4>
+            </div>
+            <form
+              action=""
+              method="post"
+              class="ride-form"
+              onsubmit="return false;"
+            >
+              <div class="mb-3">
+                <label for="Customer_Name">Customer Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Customer_Name"
+                  value="John Smith brown"
+                  name="Customer_Name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Pick_Up_Location">Pick Up Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Pick_Up_Location"
+                  value="Airport, HongKong"
+                  name="Pick_Up_Location"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Drop_Off_Location">Drop Off Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Drop_Off_Location"
+                  value="Best Hotel, HongKong"
+                  name="Drop_Off_Location"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Date">Date</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Date"
+                  value="05-12-2024"
+                  name="Date"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Time">Time</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Time"
+                  value="03:15 AM"
+                  name="Time"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Price">Price</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Price"
+                  value="$235"
+                  name="Price"
+                />
+              </div>
+              <div class="mb-4">
+                <button
+                  class="btn bg-primary w-100 py-3 text-white mb-4"
+                  onclick="startRide()"
+                >
+                  Ride Start Now
+                </button>
+              </div>
+              <div class="divider mt-4 mb-4 m-0"></div>
+              <div class="mt-4">
+                <button class="btn bg-black w-100 py-3 text-white mt-4">
+                  Contact Customer
+                </button>
+                <button class="btn btn-danger w-100 py-3 text-white mt-2">
+                  Cancel Ride
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-6">
+          <div class="card-box">
+            <div
+              class="block d-block d-md-flex align-items-center justify-content-between border-0"
+            >
+              <div class="text">
+                <h2>Upcoming Rides</h2>
+              </div>
+            </div>
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXOBtAk9U3n3MPoTGQMrsO5sZVK9MVh-M&callback=initMap"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/location.js"></script>
+  </body>
+</html>
